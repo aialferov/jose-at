@@ -2,6 +2,7 @@
 
 [![License: MIT][MIT Badge]][MIT]
 [![GitHub Release Badge]][GitHub Releases]
+[![Erlang Releases Badge]][Erlang Releases]
 
 Provides acceptance tests for [Jose](http://github.com/aialferov/jose).
 
@@ -67,3 +68,5 @@ for details.
 
 [MIT Badge]: https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square
 [GitHub Release Badge]: https://img.shields.io/github/release/aialferov/jose-at/all.svg?style=flat-square
+[Erlang Releases]: http://www.erlang.org/news/tag/release
+[Erlang Releases Badge]: https://img.shields.io/badge/Erlang-21.0%20to%2021.2-983936.svg?style=flat-square
