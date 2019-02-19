@@ -16,13 +16,13 @@ use [Docker] to run it without any dependency required.
 Assuming you have Jose running as follows:
 
 ```
-$ docker run --name jose --rm -it -p 8080:8080 aialferov/jose
+$ docker run --name jose --rm -it -p 8080:8080 aialferov/jose run
 ```
 
 the tests against this instance could be run this way:
 
 ```
-$ docker run --link jose --env HOST=jose --rm -it -p 8088:8088 aialferov/jose-at
+$ docker run --link jose --env HOST=jose --rm -it -p 8088:8088 aialferov/jose-at run
 ```
 
 After tests are complete the execution continues and serves a web page with the
@@ -35,19 +35,13 @@ details.
 To run the tests from the source directory:
 
 ```
+$ make
 $ make run
 ```
 
-### Package
-
-The test suites could be built into one binary, shipped to any machine with
-Erlang installed and run there. To build the binary:
-
-```
-$ make
-```
-
-The binary is located in "_build/default/bin".
+The first step builds test suites into a binary, that could be shipped to any
+machine with Erlang installed and run there. After the build the binary is
+located in "_build/default/bin".
 
 ### Make Interface
 
