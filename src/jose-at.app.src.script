@@ -1,0 +1,15 @@
+{application, 'jose-at', [
+    {description, "Acceptance tests for Jose"},
+    {vsn, "0.1.0"},
+    {modules, []},
+    {applications, [kernel, stdlib, xmerl, inets,
+                    cpflib, jsx, cowboy, common_test]},
+    {mod, {jose_at_app, []}},
+    {env, [
+        {git_sha, lists:sublist(os:cmd("git rev-parse HEAD 2>/dev/null"), 8)},
+        {port, 8088},
+        {config, "tmp.jose-at/jose-at.conf"},
+        {suites, "tmp.jose-at/suites"},
+        {logdir, "tmp.jose-at/logs"}
+    ]}
+]}.
